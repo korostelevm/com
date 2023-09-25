@@ -1,59 +1,46 @@
 <template>
-    <div class="hello">
-      <h1>{{ msg }}</h1>
-      <p>
-        For a guide and recipes on how to configure / customize this project,<br>
-        check out the
-        <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-      </p>
-      <h3>Installed CLI Plugins</h3>
-      <ul>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-        <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-      </ul>
-      <h3>Essential Links</h3>
-      <ul>
-        <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-        <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-        <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-        <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-        <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-      </ul>
-      <h3>Ecosystem</h3>
-      <ul>
-        <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-        <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-        <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-        <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-        <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-      </ul>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    name: 'HelloWorld',
-    props: {
-      msg: String
+  <div class="hello">
+   asdf
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Home',
+  props: {
+    msg: String
+  },
+  mounted() {   
+    const script = function (p5) {    
+      var speed = 2;    
+      var posX = 0;
+       
+      // NOTE: Set up is here   
+      p5.setup = _ => {      
+      p5.createCanvas(500, 500);      
+      p5.ellipse(p5.width / 2, p5.height / 2, 500, 500);    
+      }     
+      // NOTE: Draw is here
+      p5.draw = _ => {      
+      p5.background(0);
+      const degree = p5.frameCount * 3;      
+      const y = p5.sin(p5.radians(degree)) * 50;
+        
+      p5.push();
+        p5.translate(0, p5.height / 2);
+        p5.ellipse(posX, y, 50, 50);
+      p5.pop();
+      posX += speed;
+          
+      if (posX > p5.width || posX < 0) {    
+        speed *= -1;      
+      }
+      }  
+    }   
+    // NOTE: Use p5 as an instance mode
+    const P5 = require('p5');
+    new P5(script)
     }
-  }
-  </script>
-  
-  <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style scoped>
-  h3 {
-    margin: 40px 0 0;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  a {
-    color: #42b983;
-  }
-  </style>
-  
+}
+</script>
+

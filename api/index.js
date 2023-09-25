@@ -16,6 +16,12 @@ var options = {
 app.use(express.static("public", options));
 
 
+app.use((req, res, next) => {
+    res.status(404).sendFile(__dirname + "/public/index.html");
+  });
+
+  
+
 app.listen(3000, () => {
     }
 );

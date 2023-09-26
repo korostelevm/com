@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Posts</h1>
+    <h1></h1>
       <div v-if="posts.length">
       <div  v-for="post in posts" :key="post.title">
         <router-link :to="{name: 'Post', params: {id: post.metadata.slug}}">

@@ -35,8 +35,8 @@ marked.use({
 const getMarkdownData = async () => {
     console.log('asdf')
 
-    let f = require('!raw-loader!./aws-s3-why-sometimes-you-should-press-the-100k-dollar-button.md').default
-    markDown.value = f
+    // let f = require('!raw-loader!./aws-s3-why-sometimes-you-should-press-the-100k-dollar-button.md').default
+  markDown.value = "asdfasdf"
 //   await fetch(mdfile)
 //     .then((response) => response.text())
 //     .then((data) => ( = data));
@@ -50,7 +50,7 @@ const mdToHtml = computed(() => {
 });
 
 // call the function to be ran
-getMarkdownData();
+// getMarkdownData();
 </script>
 
 <template>

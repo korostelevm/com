@@ -9,4 +9,23 @@ module.exports = {
       .loader("raw-loader")
       .end();
   },
+  configureWebpack: config => {
+    //   // mutate config for production...
+    // } else {
+     return {
+      // output: {
+      //   filename: 'public/mizrofrontend.js',
+      // },
+      devServer: {
+        open: true,
+        // contentBase: './',
+        proxy: {
+          '/api': {
+            target: 'http://localhost:3000',
+            // pathRewrite: {'/api' : ''}
+          }
+        }
+      }
+     }
+    }
 };

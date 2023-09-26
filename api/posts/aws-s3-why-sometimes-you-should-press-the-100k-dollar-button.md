@@ -1,6 +1,6 @@
 ---
-title: 'AWS S3: Why sometimes you should press the $100k button'
-slug: 'aws-s3-why-sometimes-you-should-press-the-100k-dollar-button'
+title: AWS S3 - Why sometimes you should press the $100k button
+slug: aws-s3-why-sometimes-you-should-press-the-100k-dollar-button
 summary: ''
 colId: 60d0f077b69e2df6b324616c
 id: 620bfa2c2552ec6354ae5736

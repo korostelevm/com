@@ -7,8 +7,13 @@ author: mike-korostelev
 ---
 
 
+
+
 ## Set-up and configuration
 
+```
+git clone https://github.com/cyclic-software/starter-discord-bot.git
+```
 ### **1.** Create discord application
 
 Navigate to Discord's developer portal and create a new application

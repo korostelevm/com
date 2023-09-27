@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div clas="post">
     <router-link to="/">Go to Home</router-link>
     <div v-if="post">
       <h1>{{post.metadata.title}}</h1>
@@ -83,3 +83,7 @@ code[class*="language-"], pre[class*="language-"] {
 }
 </style>
 
+<style >
+
+
+</style>

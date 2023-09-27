@@ -1,10 +1,11 @@
 <template>
-    <div>
+    <div class="mx-4 md:mx-auto max-w-screen-lg">
+
       <div class="header">
         <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
           
           <router-link to="/">
-            <h1>mike korostelev</h1>
+            <h1 class="italic">mike korostelev</h1>
           </router-link>
           <p>
             <!-- use the router-link component for navigation. -->

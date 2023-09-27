@@ -2,10 +2,15 @@
   <div>
     <h3>About</h3>
     <div class="text-sm text-gray-600 mb-4"></div>
-    <div>
-      I'm a software architect with 10+ years of professional experience building web applications. 
-      I've worked with a variety of technologies and languages but I am primarily an expert with AWS Serverless and Node.js.
-    </div>
+    <div class="max-w-screen-sm">
+      <p>
+        Software Engineer, Cloud Architect, Technical Founder.
+        I'm currently building <a target="_blank" href="https://cyclic.sh">cyclic.sh</a>, a platform for building and deploying serverless applications. 
+      </p>
+      <p>
+        I build virtually with AWS, Serverless, Node.js, TypeScript, Rust, Python, Vue, and more. I also build physical things with wood, metal, and concrete.
+      </p>
+      </div>
     </div>
 </template>
 

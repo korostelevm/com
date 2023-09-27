@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>Articles</h3>
+    <h3>Notes</h3>
     <div class="text-sm text-gray-600 mb-4">Hope you up-voted these on hackernews</div>
       <div v-if="posts.length">
       <div  v-for="post in posts" :key="post.title" class="mb-3">

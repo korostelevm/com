@@ -1,7 +1,7 @@
 <template>
   <div >
-    <!-- <about></about>
-    <br> -->
+    <about></about>
+    <br>
     <projects></projects>
     <br>
     <posts></posts>
@@ -9,12 +9,12 @@
 </template>
 
 <script>
-// import About from './About.vue'
+import About from './About.vue'
 import Projects from './Projects.vue'
 import Posts from './Posts.vue'
 export default {
   components: { Projects,Posts,
-    //  About 
+     About 
     },
   name: 'Home',
   props: {

@@ -4,7 +4,7 @@
     <div class="text-sm text-gray-600 mb-4"></div>
     <div class="max-w-screen-sm">
       <p>
-        Software Engineer, Cloud Architect, Technical Founder.
+        Software Engineer, Hands-on Cloud Architect, Technical Founder.
         I'm currently building <a target="_blank" href="https://cyclic.sh">cyclic.sh</a>, a platform for building and deploying serverless applications. 
       </p>
       <p>

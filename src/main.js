@@ -11,7 +11,7 @@ import Home from './components/Home.vue'
 const About = { template: '<div>About</div>' }
 
 const routes = [
-  { path: '/', component: Posts, 
+  { path: '/', component: Home, 
     meta: {
       title: "Mike Korostelev",
       description: "Cloud Architect."

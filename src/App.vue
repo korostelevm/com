@@ -59,6 +59,7 @@
       </div>
     </div>
 
+    
     <router-view class="my-10"></router-view>
   </div>
 </template>

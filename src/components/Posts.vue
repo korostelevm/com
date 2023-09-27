@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1></h1>
+    <h3>Articles</h3>
+    <div class="text-sm text-gray-600 mb-4">Hope you up-voted these on reddit</div>
       <div v-if="posts.length">
       <div  v-for="post in posts" :key="post.title" class="mb-3">
         <router-link :to="{name: 'Post', params: {id: post.metadata.slug, fff: post.metadata.title}}">

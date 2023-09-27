@@ -23,6 +23,10 @@ module.exports = {
           '/api': {
             target: 'http://localhost:3000',
             // pathRewrite: {'/api' : ''}
+          },
+          '/blog': {
+            target: 'http://localhost:3000',
+            // pathRewrite: {'/api' : ''}
           }
         }
       }

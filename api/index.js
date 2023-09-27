@@ -14,6 +14,9 @@ var options = {
   redirect: false,
 };
 app.use(express.static("public", options));
+app.use('/blog', express.static('blog'));
+
+
 
 
 app.use((req, res, next) => {
@@ -52,9 +55,8 @@ router.get('/api/posts', async (req, res) => {
 
   
   
-  const dir = path.resolve(__dirname, 'posts');
-  const files = fs.readdirSync(dir); 
-
+  const dir = path.resolve(__dirname, 'blog');
+  const files = fs.readdirSync(dir).filter((file) => file.endsWith('.md')); 
   const posts = files.map((file) => {
     const filePath = path.resolve(dir, file);
     const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -71,7 +73,7 @@ router.get('/api/posts', async (req, res) => {
 
 router.get('/api/posts/:slug', async (req, res) => {
   const {slug} = req.params;
-  const filePath = path.resolve(__dirname, 'posts', `${slug}.md`);
+  const filePath = path.resolve(__dirname, 'blog', `${slug}.md`);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const metadata = parseMetadata(fileContent);
   const body = fileContent.replace(/---(.|\n)*---/, '').trim();

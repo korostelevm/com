@@ -22,6 +22,8 @@ import "prismjs/plugins/toolbar/prism-toolbar.js"; // required for the following
 import "prismjs/plugins/toolbar/prism-toolbar.css"; // required for the following plugins
 import "prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.js"; // show copy button
 import "prismjs/plugins/show-language/prism-show-language.js"; // display the language of the code block
+import "prismjs/themes/prism-tomorrow.css"; // you can change
+
 
 // This is needed for a conflict with other CSS files being used (i.e. Bulma).
 import "prismjs/plugins/custom-class/prism-custom-class";
@@ -63,11 +65,21 @@ export default {
       console.log(this.post)  
       // markDown.value = "asdfasdf"
       this.mdToHtml =  marked.parse(this.post.body)
-      prism.highlightAll(); // perform the highlighting of the Code Blocks
+      // next tick
+      this.$nextTick(() => {
+        prism.highlightAll();
+      });
+
 
     }
     
   }
 }
 </script>
+
+<style>
+code[class*="language-"], pre[class*="language-"] {
+  font-size:0.9em !important;
+}
+</style>
 

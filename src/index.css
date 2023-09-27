@@ -1,8 +1,55 @@
-/* @tailwind base; */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 
-p{
-    @apply py-2
+
+
+body {
+  @apply bg-white text-gray-800;
 }
+
+/* Heading tags */
+h1 {
+  @apply text-4xl font-bold my-4;
+}
+
+h2 {
+  @apply text-3xl font-bold my-4;
+}
+
+h3 {
+  @apply text-2xl font-bold my-3;
+}
+
+h4 {
+  @apply text-xl font-bold my-3;
+}
+
+h5 {
+  @apply text-lg font-bold my-2;
+}
+
+h6 {
+  @apply text-base font-bold my-2;
+}
+
+/* Paragraph */
+p {
+  @apply my-4;
+}
+
+/* Lists */
+ul, ol {
+  @apply text-lg list-decimal list-inside my-4;
+}
+
+li {
+  @apply ml-4;
+}
+
+/* Anchor tags */
+a {
+  @apply text-blue-600 hover:underline;
+}
+

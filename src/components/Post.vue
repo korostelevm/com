@@ -3,7 +3,9 @@
     <router-link to="/">Go to Home</router-link>
     <div v-if="post">
       <h1>{{post.metadata.title}}</h1>
-      <div class="line-numbers language-markup" v-html="mdToHtml"></div>
+      <div class="max-w-3xl">
+        <div class="line-numbers language-markup" v-html="mdToHtml"></div>
+      </div>
     </div>
   </div>
 </template>
@@ -83,7 +85,6 @@ code[class*="language-"], pre[class*="language-"] {
 }
 </style>
 
-<style >
-
+<style scoped>
 
 </style>

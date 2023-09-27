@@ -11,9 +11,15 @@ import Home from './components/Home.vue'
 const About = { template: '<div>About</div>' }
 
 const routes = [
-  { path: '/', component: Posts },
-  { path: '/posts/:id', component: Post, props: true, name: 'Post' },
-  { path: '/about', component: About },
+  { path: '/', component: Posts, 
+    meta: {
+      title: "My Website",
+      description: "This is the description of my website."
+    }
+   },
+  { path: '/posts/:id', component: Post, props: true, name: 'Post',
+    meta: { title: 'Cyclic - Deploy New App' }
+   },
 ]
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
@@ -22,8 +28,10 @@ const router = VueRouter.createRouter({
 })
 
 
+
 const app = createApp(App)
 app.use(router)
+// app.use(useMeta)
 
 
 app.mount('#app')

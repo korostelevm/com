@@ -49,9 +49,13 @@
 <script>
   export default {
     name: "App",
+    setup () {
+    },
     mounted() {
       console.log("App mounted!");
     },
+    data: () => ({
+    }),
   };
 </script>
 

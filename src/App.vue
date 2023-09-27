@@ -39,6 +39,13 @@
         <i class="far fa-file-pdf"></i>
           CV
         </a>
+        <a
+          href="https://coldlambda.com/"
+          target="_blank"
+          class="text-gray-900 font-bold hover:underline"
+        >
+        λ
+        </a>
       </div>
     </div>
 

@@ -13,12 +13,15 @@ const About = { template: '<div>About</div>' }
 const routes = [
   { path: '/', component: Posts, 
     meta: {
-      title: "My Website",
-      description: "This is the description of my website."
+      title: "Mike Korostelev",
+      description: "Cloud Architect."
     }
    },
   { path: '/posts/:id', component: Post, props: true, name: 'Post',
-    meta: { title: 'Cyclic - Deploy New App' }
+    meta: {
+      title: "{subtitle}",
+      description: "Cloud Architect."
+    }
    },
 ]
 const router = VueRouter.createRouter({
@@ -26,6 +29,16 @@ const router = VueRouter.createRouter({
 //   history: VueRouter.createWebHashHistory(),
   routes, 
 })
+
+router.beforeEach(async (to, from) => {
+  if(to.meta.title){
+    document.title = to.meta.title.replace('{subtitle}', to.params.id)
+  }else{
+    document.title = 'Mike Korostelev'
+  }
+  window.scrollTo({ top: 0})
+})
+
 
 
 

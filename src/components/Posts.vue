@@ -3,7 +3,7 @@
     <h1></h1>
       <div v-if="posts.length">
       <div  v-for="post in posts" :key="post.title" class="mb-3">
-        <router-link :to="{name: 'Post', params: {id: post.metadata.slug}}">
+        <router-link :to="{name: 'Post', params: {id: post.metadata.slug, fff: post.metadata.title}}">
           <span class="text-lg font-bold">{{post.metadata.title}}</span>
         </router-link>
         <div class="text-sm text-gray-600"> {{ post.date }}</div>

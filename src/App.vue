@@ -47,6 +47,16 @@
         λ
         </a>
       </div>
+      <div class="my-2">
+        <a
+          href="https://calendly.com/korostelevm/30min"
+          target="_blank"
+          class="text-gray-500 hover:underline"
+        >
+          Schedule a call
+        </a>
+        
+      </div>
     </div>
 
     <router-view class="my-10"></router-view>

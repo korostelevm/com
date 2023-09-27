@@ -1,6 +1,6 @@
 <template>
   <div clas="post">
-    <router-link to="/">Go to Home</router-link>
+    <router-link to="/">Back</router-link>
     <div v-if="post">
       <h1>{{post.metadata.title}}</h1>
       <div class="max-w-3xl">

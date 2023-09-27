@@ -21,7 +21,7 @@ const routes = [
     meta: {
       title: "{subtitle}",
       description: "Cloud Architect."
-    }
+    } 
    },
 ]
 const router = VueRouter.createRouter({

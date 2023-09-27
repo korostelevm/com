@@ -63,7 +63,7 @@ router.get('/api/posts', async (req, res) => {
     const metadata = parseMetadata(fileContent);
     const body = fileContent.replace(/---(.|\n)*---/, '').trim();
     const slug = file.replace('.md', '');
-    return {slug, metadata, body};
+    return {slug, metadata};
   });
 
 

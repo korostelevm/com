@@ -30,7 +30,7 @@
           Twitter/X
         </a>
         <a
-          href="/blog/resume-2023.pdf"
+          href="/blog/resume-2023-a.pdf"
           target="_blank"
           class="text-gray-900 hover:underline"
         >
